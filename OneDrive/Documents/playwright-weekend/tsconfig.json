@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",                              // Target JavaScript version
+      "module": "CommonJS",                            // Module system
+      "rootDir": "./",                                 // Root directory of the project
+      "outDir": "./dist",                              // Output directory for compiled files
+      "esModuleInterop": true,                         // Enable ES module interop
+      "strict": true,                                  // Enable strict type-checking options
+      "moduleResolution": "node",                      // Use Node.js module resolution
+      "baseUrl": ".",                                  // Base URL for resolving non-relative module names
+      "paths": {
+        "*": ["node_modules/*"],                       // Allow imports from node_modules
+        "@test-data/*": ["test-data/*"]                // Alias for importing from the test-data folder
+      },
+      "resolveJsonModule": true                        // Allow importing JSON modules
+    },
+    "include": [
+      "./**/*.ts"                                      // Include all TypeScript files in the project
+    ],
+    "exclude": [
+      "node_modules",                                  // Exclude node_modules from compilation
+      "dist"                                           // Exclude output directory
+    ]
+  }
